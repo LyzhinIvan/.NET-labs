@@ -15,9 +15,9 @@ namespace Lab01
             (from tire in ManufacturedTires
              where tire.ProfileWidth == profileWidth && tire.ProfileHeight == profileHeight && tire.Type == type && tire.Diameter == diameter
              select (Tire)Activator.CreateInstance(tire.GetType()))
-            .FirstOrDefault();
+            .FirstOrDefault();  
     }
-
+        
     public class HakkapeliittaTire : Tire
     {
         public HakkapeliittaTire() : base("Hakkapeliitta", 170, 70, CarcassType.Radial, 15)

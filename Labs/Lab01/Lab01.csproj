@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlcastaFactory.cs" />
+    <Compile Include="AutoVaz.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="ICarFactory.cs" />
     <Compile Include="KamaFactory.cs" />
     <Compile Include="NokianFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
