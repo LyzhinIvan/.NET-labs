@@ -1,21 +1,50 @@
-﻿using System;
+﻿using Lab01;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
 namespace Lab02
 {
-    public class PriceList<T> : IEnumerable, ICollection, ICloneable
-    {
-        private Dictionary<T, double> priceListItems = new Dictionary<T, double>();
+    public interface IPriceList<out T>
+    { }
 
-        public void Add(T element, double price)
+    public class PriceList<T> : ICollection<T>, ICloneable, IPriceList<T> where T:class
+    {
+        private Dictionary<T, double> priceListItems;
+
+        public PriceList()
         {
-            priceListItems.Add(element, price);
+            priceListItems = new Dictionary<T, double>();
+        }
+
+        public void Add(T item, double price)
+        {
+            priceListItems.Add(item, price);
+        }
+
+        public void Add(T item)
+        {
+            Add(item, 0);
+        }
+
+        public void Clear()
+        {
+            priceListItems.Clear();
         }
 
         public bool Contains(T element)
         {
             return priceListItems.ContainsKey(element);
+        }
+
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            priceListItems.Keys.CopyTo(array, arrayIndex);
+        }
+
+        public bool Remove(T item)
+        {
+            return priceListItems.Remove(item);
         }
 
         public double GetPrice(T element)
@@ -31,21 +60,7 @@ namespace Lab02
             }
         }
 
-        public bool IsSynchronized
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        public object SyncRoot
-        {
-            get
-            {
-                return null;
-            }
-        }
+        public bool IsReadOnly { get; }
 
         public object Clone()
         {
@@ -54,12 +69,9 @@ namespace Lab02
             return copy;
         }
 
-        public void CopyTo(Array array, int index)
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
-            foreach(var item in priceListItems)
-            {
-                array.SetValue(new PriceListItem<T>(item.Key, item.Value), index++);
-            }
+            return priceListItems.Keys.GetEnumerator();
         }
 
         public IEnumerator GetEnumerator()

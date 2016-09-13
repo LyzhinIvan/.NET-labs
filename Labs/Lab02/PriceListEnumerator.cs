@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Lab02
 {
-    public class PriceListEnumerator<T> : IEnumerator
+    public class PriceListEnumerator<T> : IEnumerator<PriceListItem<T>> where T : class
     {
         private List<PriceListItem<T>> items = new List<PriceListItem<T>>();
         int position = -1;
@@ -30,13 +30,7 @@ namespace Lab02
             }
         }
 
-        object IEnumerator.Current
-        {
-            get
-            {
-                return Current;
-            }
-        }
+        object IEnumerator.Current => Current;
 
         public void Dispose()
         {
