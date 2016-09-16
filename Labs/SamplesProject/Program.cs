@@ -8,16 +8,16 @@ namespace SamplesProject
     {
         static void Main(string[] args)
         {
-            IPriceList<HakkapeliittaTire> hakPriceList = new PriceList<HakkapeliittaTire>();
-            IPriceList<Tire> tirePriceList = hakPriceList; // covarience
-
-            Action<IPriceList<HakkapeliittaTire>> hakPrint = Print; // contravarience
-            hakPrint(hakPriceList);
+            ICatalog<Tire> catalog = new Catalog<Tire>() {new HakkapeliittaTire()};
+            Print(catalog);
         }
 
-        static void Print(IPriceList<Tire> priceList)
+        static void Print(ICatalog<Tire> tires)
         {
-            
+            foreach (var tire in tires)
+            {
+                Console.WriteLine(tire.ToString());
+            }
         }
     }
 }

@@ -16,6 +16,11 @@
             Type = type;
             Diameter = diameter;
         }
+
+        public override string ToString()
+        {
+            return $"{Name} {ProfileWidth}/{ProfileHeight} {Type.ToString()[0]}{Diameter}";
+        }
     }
 
     public enum CarcassType

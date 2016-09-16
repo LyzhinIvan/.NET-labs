@@ -40,9 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PriceList.cs" />
-    <Compile Include="PriceListEnumerator.cs" />
-    <Compile Include="PriceListItem.cs" />
+    <Compile Include="Catalog.cs" />
+    <Compile Include="CatalogEnumerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
