@@ -1,6 +1,8 @@
-﻿namespace Lab01
+﻿using System;
+
+namespace Lab01
 {
-    public abstract class Tire
+    public abstract class Tire : IComparable
     {
         public string Name { get; }
         public int ProfileWidth { get; }
@@ -20,6 +22,12 @@
         public override string ToString()
         {
             return $"{Name} {ProfileWidth}/{ProfileHeight} {Type.ToString()[0]}{Diameter}";
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj.GetType() != this.GetType()) return -1;
+            return this.Diameter.CompareTo(((Tire)obj).Diameter);
         }
     }
 

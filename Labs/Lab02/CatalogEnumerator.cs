@@ -5,14 +5,14 @@ using Lab01;
 
 namespace Lab02
 {
-    class CatalogEnumerator<T> : IEnumerator<T> where T:Tire
+    class CatalogEnumerator<T> : IEnumerator<T>
     {
-        private readonly List<T> tires;
+        private readonly List<T> elements;
         private int index;
 
-        public CatalogEnumerator(IEnumerable<T> tires)
+        public CatalogEnumerator(IEnumerable<T> elements)
         {
-            this.tires = tires.ToList();
+            this.elements = elements.ToList();
             index = -1;
         }
 
@@ -22,7 +22,7 @@ namespace Lab02
 
         public bool MoveNext()
         {
-            if (index + 1 == tires.Count)
+            if (index + 1 == elements.Count)
                 return false;
             index++;
             return true;
@@ -33,7 +33,7 @@ namespace Lab02
             index = -1;
         }
 
-        public T Current => tires[index];
+        public T Current => elements[index];
 
         object IEnumerator.Current => Current;
     }
