@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design.Serialization;
 using System.Reflection;
 using System.Threading;
 using Lab01;
 using Lab01.Exceptions;
+using Lab01.Serializers;
 
 namespace SamplesProject
 {
@@ -12,7 +14,7 @@ namespace SamplesProject
     {
         static void Main(string[] args)
         {
-            Lab6_Example();
+            Lab7_Example();
         }
 
         private static void Lab5_Example()
@@ -60,6 +62,37 @@ namespace SamplesProject
             //    Console.WriteLine("{0} {1}", item.Key, item.Value);
             //}
         }
+
+        private static void Lab7_Example()
+        {
+            var priceList = new PriceList<Tire>();
+            priceList.Add(new Tire("Hakapelita", 160, 75, CarcassType.Radial, 15), 4000);
+            priceList.Add(new Tire("Kama", 170, 75, CarcassType.Radial, 14), 2500);
+            Console.WriteLine("Test JSON serializing");
+            TestSerializer(priceList, new TirePriceListJsonSerializer(), "serialize.json");
+            Console.WriteLine("\nTest XML serializing");
+            TestSerializer(priceList, new TirePriceListXmlSerializer(), "serialize.xml");
+            Console.WriteLine("\nTest Binary serializing");
+            TestSerializer(priceList, new TirePriceListBinarySerializer(), "serialize.bin");
+        }
+
+        private static void TestSerializer(PriceList<Tire> priceList, ITirePriceListSerializer serializer, string path)
+        {
+            Console.WriteLine("Before serialization");
+            foreach (KeyValuePair<Tire, double> item in priceList)
+            {
+                Console.WriteLine("{0} {1}", item.Key, item.Value);
+            }
+            serializer.Serialize(priceList, path);
+            var newPriceList = serializer.Deserialize(path);
+            Console.WriteLine("After serialization and deserialization");
+            foreach (KeyValuePair<Tire, double> item in newPriceList)
+            {
+                Console.WriteLine("{0} {1}", item.Key, item.Value);
+            }
+        }
+
+
     }
 
 

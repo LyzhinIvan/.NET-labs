@@ -4,13 +4,18 @@ using Lab01.Exceptions;
 
 namespace Lab01
 {
+    [Serializable]
     public class Tire : IComparable, ICloneable
     {
-        public string Name { get; }
-        public int ProfileWidth { get; }
-        public int ProfileHeight { get; }
-        public CarcassType Type { get; }
-        public int Diameter { get; }
+        public string Name { get; set; }
+        public int ProfileWidth { get; set; }
+        public int ProfileHeight { get; set; }
+        public CarcassType Type { get; set; }
+        public int Diameter { get; set; }
+
+        public Tire()
+        {
+        }
 
         public Tire(string name, int profileWidth, int profileHeight, CarcassType type, int diameter)
         {

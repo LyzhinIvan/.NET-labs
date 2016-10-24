@@ -6,7 +6,8 @@ using System.Linq;
 
 namespace Lab01
 {
-    public class PriceList<T> : IEnumerable
+    [Serializable]
+    public class PriceList<T> : ICollection<KeyValuePair<T, double>>
     {
         private List<KeyValuePair<T, double>>  items = new List<KeyValuePair<T, double>>();
 
@@ -37,39 +38,44 @@ namespace Lab01
             }
         }
 
+        // Имплементация интерфейса ICollection
+
+        IEnumerator<KeyValuePair<T, double>> IEnumerable<KeyValuePair<T, double>>.GetEnumerator()
+        {
+            return new PriceListEnumerator<T>(items);
+        }
 
         public IEnumerator GetEnumerator()
         {
             return new PriceListEnumerator<T>(items);
         }
-    }
 
-    public class PriceListEnumerator<T> : IEnumerator
-    {
-        private List<KeyValuePair<T, double>> items;
-        private int index;
-
-        public PriceListEnumerator(List<KeyValuePair<T, double>> items)
+        public void Add(KeyValuePair<T, double> item)
         {
-            this.items = items;
-            this.index = -1;
+            items.Add(item);
         }
 
-        public bool MoveNext()
+        public void Clear()
         {
-            if (index + 1 < items.Count)
-            {
-                index++;
-                return true;
-            }
-            return false;
+            items.Clear();
         }
 
-        public void Reset()
+        public bool Contains(KeyValuePair<T, double> item)
         {
-            index = -1;
+            return items.Contains(item);
         }
 
-        public object Current => items[index];
+        public void CopyTo(KeyValuePair<T, double>[] array, int arrayIndex)
+        {
+            items.CopyTo(array, arrayIndex);
+        }
+
+        public bool Remove(KeyValuePair<T, double> item)
+        {
+            return items.Remove(item);
+        }
+
+        public int Count => items.Count;
+        public bool IsReadOnly => false;
     }
 }
