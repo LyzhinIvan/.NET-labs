@@ -43,16 +43,33 @@
     <Compile Include="AlcastaFactory.cs" />
     <Compile Include="AutoVaz.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="CarCreationEventArgs.cs" />
+    <Compile Include="CarFactoryEventArgs.cs" />
+    <Compile Include="CarRepairEventArgs.cs" />
+    <Compile Include="Exceptions\FileFormatException.cs" />
     <Compile Include="ICarFactory.cs" />
     <Compile Include="KamaFactory.cs" />
     <Compile Include="CarFactoryLogger.cs" />
     <Compile Include="NokianFactory.cs" />
+    <Compile Include="PriceList.cs" />
+    <Compile Include="ProgressHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rim.cs" />
     <Compile Include="IRimFactory.cs" />
     <Compile Include="Tire.cs" />
     <Compile Include="ITireFactory.cs" />
     <Compile Include="Wheel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logging\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\nokian.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
