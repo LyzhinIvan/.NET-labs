@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.IO;
 using System.Security.AccessControl;
+using System.Threading.Tasks;
 
 namespace Lab01
 {
@@ -59,7 +60,7 @@ namespace Lab01
 
         private void OnLog(CarFactoryEventArgs args)
         {
-            Log?.Invoke(writer, args);
+            Task.Factory.StartNew(() => Log?.Invoke(writer, args));
         }
     }
 }
