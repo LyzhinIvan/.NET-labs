@@ -7,6 +7,9 @@ using System.Xml.Serialization;
 
 namespace Lab01.Serializers
 {
+    /// <summary>
+    /// Бинарный сериализатор для прайс-листа шин
+    /// </summary>
     public class TirePriceListBinarySerializer : ITirePriceListSerializer
     {
         [Serializable]
@@ -16,6 +19,11 @@ namespace Lab01.Serializers
             public double Value { get; set; }
         }
 
+        /// <summary>
+        /// Сериализует прайс-лист шин в бинарный формат и записывает в файл
+        /// </summary>
+        /// <param name="priceList">Прайс-лист</param>
+        /// <param name="path">Путь к файлу</param>
         public void Serialize(PriceList<Tire> priceList, string path)
         {
             var arr = priceList.Select(item => new Pair() { Key = item.Key, Value = item.Value }).ToArray();
@@ -26,6 +34,12 @@ namespace Lab01.Serializers
             }
         }
 
+
+        /// <summary>
+        /// Читает из бинарного файла и десериализует в прайс-лист
+        /// </summary>
+        /// <param name="path">Путь к файлу</param>
+        /// <returns>Прайс-лист</returns>
         public PriceList<Tire> Deserialize(string path)
         {
             Pair[] arr;

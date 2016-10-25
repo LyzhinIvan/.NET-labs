@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Lab01.AlcastaFactory" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7.25" Y="2" Width="1.5" />
+    <Position X="10.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AlcastaFactory.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Lab01.AlcastaM29Rim" Collapsed="true">
-    <Position X="2" Y="6.25" Width="1.5" />
+  <Class Name="Lab01.AlcastaM29Rim">
+    <Position X="10.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AlcastaFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.AutoVaz" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9" Y="2" Width="1.5" />
+    <Position X="7.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAUAAAAAAAQAFAAAgCAAAAAEAAAAAAAEAAAAA=</HashCode>
       <FileName>AutoVaz.cs</FileName>
@@ -24,42 +24,42 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Lab01.Car" Collapsed="true">
-    <Position X="10.75" Y="2" Width="1.5" />
+    <Position X="7.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAAAA=</HashCode>
       <FileName>Car.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.CarCreationEventArgs" Collapsed="true">
-    <Position X="2" Y="3.5" Width="1.75" />
+    <Position X="2" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CarCreationEventArgs.cs</FileName>
+      <FileName>Logging\CarCreationEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.CarFactoryEventArgs" Collapsed="true">
-    <Position X="3.25" Y="2" Width="1.75" />
+    <Position X="3.25" Y="3" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAA=</HashCode>
-      <FileName>CarFactoryEventArgs.cs</FileName>
+      <FileName>Logging\CarFactoryEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.CarFactoryLogger" Collapsed="true">
-    <Position X="7.25" Y="3" Width="1.5" />
+    <Position X="3.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QIAAAAAAQAAAAAAAAABAAAEAAAgAAACAAQAAAAAAAAA=</HashCode>
-      <FileName>CarFactoryLogger.cs</FileName>
+      <FileName>Logging\CarFactoryLogger.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.CarRepairEventArgs" Collapsed="true">
-    <Position X="4.5" Y="3.5" Width="1.75" />
+    <Position X="4.5" Y="4.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CarRepairEventArgs.cs</FileName>
+      <FileName>Logging\CarRepairEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.KamaFactory" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="3" Width="1.5" />
+    <Position X="9" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAABAAAAAAAA=</HashCode>
       <FileName>KamaFactory.cs</FileName>
@@ -67,22 +67,22 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Lab01.NokianFactory" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="7.25" Y="4" Width="1.5" />
+    <Position X="9" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAABAAAAAAAA=</HashCode>
       <FileName>NokianFactory.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="1.023" Collapsed="true" />
+    <Lollipop Position="0.21" Collapsed="true" />
   </Class>
   <Class Name="Lab01.Rim" Collapsed="true">
-    <Position X="2" Y="5" Width="1.5" />
+    <Position X="10.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Rim.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.Tire" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9" Y="4" Width="1.5" />
+    <Position X="9" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAQEEAAAAAwAAAAAAAAAAQABAAAAABA=</HashCode>
       <FileName>Tire.cs</FileName>
@@ -90,84 +90,84 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Lab01.Wheel" Collapsed="true">
-    <Position X="10.75" Y="4" Width="1.5" />
+    <Position X="7.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Wheel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.Exceptions.FileFormatException" Collapsed="true">
-    <Position X="9" Y="3" Width="1.5" />
+    <Position X="11" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Exceptions\FileFormatException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Lab01.ICarFactory" Collapsed="true">
-    <Position X="7.25" Y="5.25" Width="1.5" />
+    <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAEAAAAAAAAAAAAAACAAAAAEAAAAAAAEAAAAA=</HashCode>
       <FileName>ICarFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Lab01.IRimFactory" Collapsed="true">
-    <Position X="9" Y="5.25" Width="1.5" />
+    <Position X="10.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IRimFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Lab01.ITireFactory" Collapsed="true">
-    <Position X="10.75" Y="5.25" Width="1.5" />
+    <Position X="9" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ITireFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="Lab01.CarType" Collapsed="true">
-    <Position X="9" Y="6.25" Width="1.5" />
+    <Position X="7.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAABAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Car.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Lab01.LoggingType" Collapsed="true">
-    <Position X="7.25" Y="7" Width="1.5" />
+    <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CarFactoryLogger.cs</FileName>
+      <FileName>Logging\CarFactoryLogger.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Lab01.EventType" Collapsed="true">
-    <Position X="10.75" Y="6.25" Width="1.5" />
+    <Position X="3.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
-      <FileName>CarFactoryLogger.cs</FileName>
+      <FileName>Logging\CarFactoryLogger.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="Lab01.CarcassType" Collapsed="true">
-    <Position X="7.25" Y="6.25" Width="1.5" />
+    <Position X="9" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAEAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Tire.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Delegate Name="Lab01.LogWrite" Collapsed="true">
-    <Position X="10.75" Y="8" Width="1.5" />
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CarFactoryLogger.cs</FileName>
+      <FileName>Logging\CarFactoryLogger.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Lab01.CarCreationHandler" Collapsed="true">
-    <Position X="7.25" Y="8" Width="1.5" />
+    <Position X="2" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>ICarFactory.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Lab01.CarRepairHandler" Collapsed="true">
-    <Position X="9" Y="8" Width="1.5" />
+    <Position X="4.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAABAAAAAAAAAQQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ICarFactory.cs</FileName>

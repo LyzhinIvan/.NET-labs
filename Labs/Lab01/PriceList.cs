@@ -3,27 +3,48 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Threading;
 
 namespace Lab01
 {
+    /// <summary>
+    /// Коллекция для хранения объектов и их цен
+    /// </summary>
+    /// <typeparam name="T">Тип хранимых объектов</typeparam>
     [Serializable]
     public class PriceList<T> : ICollection<KeyValuePair<T, double>>
     {
         private List<KeyValuePair<T, double>>  items = new List<KeyValuePair<T, double>>();
 
+        /// <summary>
+        /// Добавление элемента в прайс-лист
+        /// </summary>
+        /// <param name="element">Элемент</param>
+        /// <param name="price">Цена</param>
         public void Add(T element, double price)
         {
             items.Add(new KeyValuePair<T, double>(element, price));
         }
 
+        /// <summary>
+        /// Обращение к элементу прайс-листа по индексу
+        /// </summary>
+        /// <param name="i">Индекс</param>
+        /// <returns>Элемент прайс-листа</returns>
         public KeyValuePair<T, double> this[int i]
         {
             get { return items[i]; }
             set { items[i] = value; }
         }
 
+        /// <summary>
+        /// Сортирует элементы по цене
+        /// </summary>
+        /// <param name="progressHolder">Объект, позволяющий следить за прогрессом сортировки</param>
         public void Sort(ProgressHolder progressHolder = null)
         {
+            Console.WriteLine("{0} Sorting started", Thread.CurrentThread.ManagedThreadId);
+
             for (int i = 0; i < items.Count; ++i)
             {
                 for (int j = i + 1; j < items.Count; ++j)
@@ -36,6 +57,9 @@ namespace Lab01
                 if (progressHolder != null)
                     progressHolder.Progress = (int) ((double) (i + 1)*100/items.Count);
             }
+
+            Console.WriteLine("{0} Sorting finished", Thread.CurrentThread.ManagedThreadId);
+
         }
 
         // Имплементация интерфейса ICollection

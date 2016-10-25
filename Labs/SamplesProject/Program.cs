@@ -14,7 +14,7 @@ namespace SamplesProject
     {
         static void Main(string[] args)
         {
-            Lab7_Example();
+            Lab6_Example();
         }
 
         private static void Lab5_Example()
@@ -47,7 +47,6 @@ namespace SamplesProject
             var progressHolder = new ProgressHolder();
             Thread thread = new Thread(() => priceList.Sort(progressHolder));
             thread.Start();
-            Console.WriteLine("Sorting started");
             Console.Write("Progress: 0%");
             while (progressHolder.Progress < 100)
             {
@@ -56,7 +55,6 @@ namespace SamplesProject
             }
             Console.WriteLine("\rProgress: 100%");
             thread.Join();
-            Console.WriteLine("Sorting finished");
             //foreach (KeyValuePair<Tire, double> item in priceList)
             //{
             //    Console.WriteLine("{0} {1}", item.Key, item.Value);
