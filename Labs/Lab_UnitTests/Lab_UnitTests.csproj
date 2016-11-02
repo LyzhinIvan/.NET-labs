@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B9B932B4-3029-44B2-ACA0-B627649B7048}</ProjectGuid>
+    <ProjectGuid>{1A33182B-97C8-4B00-A311-752B61448E8B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lab01</RootNamespace>
-    <AssemblyName>Lab01</AssemblyName>
+    <RootNamespace>Lab_UnitTests</RootNamespace>
+    <AssemblyName>Lab_UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Lab01.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -45,40 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlcastaFactory.cs" />
-    <Compile Include="AutoVaz.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Logging\CarCreationEventArgs.cs" />
-    <Compile Include="Logging\CarFactoryEventArgs.cs" />
-    <Compile Include="Logging\CarRepairEventArgs.cs" />
-    <Compile Include="Exceptions\FileFormatException.cs" />
-    <Compile Include="ICarFactory.cs" />
-    <Compile Include="KamaFactory.cs" />
-    <Compile Include="Logging\CarFactoryLogger.cs" />
-    <Compile Include="NokianFactory.cs" />
-    <Compile Include="PriceList.cs" />
-    <Compile Include="PriceListEnumerator.cs" />
-    <Compile Include="ProgressHolder.cs" />
+    <Compile Include="AutovazTests.cs" />
+    <Compile Include="LoggerTests.cs" />
+    <Compile Include="PriceListTests.cs" />
+    <Compile Include="SerializersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rim.cs" />
-    <Compile Include="IRimFactory.cs" />
-    <Compile Include="Serializers\IPriceListSerializer.cs" />
-    <Compile Include="Serializers\ITirePriceListSerializer.cs" />
-    <Compile Include="Serializers\TirePriceListBinarySerializer.cs" />
-    <Compile Include="Serializers\TirePriceListJsonSerializer.cs" />
-    <Compile Include="Serializers\TirePriceListXmlSerializer.cs" />
-    <Compile Include="Tire.cs" />
-    <Compile Include="ITireFactory.cs" />
-    <Compile Include="Wheel.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="config\nokian.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Compile Include="TireTests.cs" />
+    <Compile Include="WheelTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <ProjectReference Include="..\Lab01\Lab01.csproj">
+      <Project>{b9b932b4-3029-44b2-aca0-b627649b7048}</Project>
+      <Name>Lab01</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

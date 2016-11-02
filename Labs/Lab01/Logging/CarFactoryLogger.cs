@@ -60,7 +60,7 @@ namespace Lab01
 
         private void OnLog(CarFactoryEventArgs args)
         {
-            Task.Factory.StartNew(() => Log?.Invoke(writer, args));
+            Log?.Invoke(writer, args);
         }
     }
 }

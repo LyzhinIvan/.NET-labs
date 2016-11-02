@@ -16,10 +16,11 @@ namespace Lab01.Serializers
         /// <param name="path">Путь к файлу</param>
         public void Serialize(PriceList<Tire> priceList, string path)
         {
-            File.WriteAllText(path, JsonConvert.SerializeObject(priceList, Formatting.Indented), Encoding.UTF8);
+	        var str = JsonConvert.SerializeObject(priceList, Formatting.Indented);
+	        File.WriteAllText(path, str, Encoding.UTF8);
         }
 
-        /// <summary>
+	    /// <summary>
         /// Читает из файла JSON и десериализует в прайс-лист
         /// </summary>
         /// <param name="path">Путь к файлу</param>

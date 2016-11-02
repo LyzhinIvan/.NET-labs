@@ -33,7 +33,7 @@ namespace Lab01
 
         public static Tire FromString(string str)
         {
-            Regex regex = new Regex("$(\\w+) ([0-9]+)/([0-9]+) (D|R|B)([0-9]+)^");
+            Regex regex = new Regex("^(\\w+) (\\d+)/(\\d+) (D|R|B)(\\d+)$");
             if (!regex.IsMatch(str))
                 throw new FileFormatException();
             var match = regex.Match(str);
@@ -54,6 +54,31 @@ namespace Lab01
             if (obj.GetType() != this.GetType()) return -1;
             return this.Diameter.CompareTo(((Tire)obj).Diameter);
         }
+
+	    public override bool Equals(object obj)
+	    {
+		    if (this == obj) return true;
+		    if (obj.GetType() != this.GetType()) return false;
+		    return this.Equals((Tire) obj);
+	    }
+
+	    private bool Equals(Tire other)
+	    {
+		    return string.Equals(Name, other.Name) && ProfileWidth == other.ProfileWidth && ProfileHeight == other.ProfileHeight && Type == other.Type && Diameter == other.Diameter;
+	    }
+
+	    public override int GetHashCode()
+	    {
+		    unchecked
+		    {
+			    var hashCode = Name?.GetHashCode() ?? 0;
+			    hashCode = (hashCode*397) ^ ProfileWidth;
+			    hashCode = (hashCode*397) ^ ProfileHeight;
+			    hashCode = (hashCode*397) ^ (int) Type;
+			    hashCode = (hashCode*397) ^ Diameter;
+			    return hashCode;
+		    }
+	    }
     }
 
     public enum CarcassType

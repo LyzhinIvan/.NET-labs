@@ -55,10 +55,6 @@ namespace SamplesProject
             }
             Console.WriteLine("\rProgress: 100%");
             thread.Join();
-            //foreach (KeyValuePair<Tire, double> item in priceList)
-            //{
-            //    Console.WriteLine("{0} {1}", item.Key, item.Value);
-            //}
         }
 
         private static void Lab7_Example()
