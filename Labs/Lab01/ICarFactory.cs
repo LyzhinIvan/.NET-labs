@@ -9,9 +9,29 @@ namespace Lab01
 
     public interface ICarFactory
     {
+		/// <summary>
+		/// Создать седан
+		/// </summary>
+		/// <returns>Машина - седан</returns>
         Car CreateSedan();
+		
+		/// <summary>
+		/// Создать хетчбек
+		/// </summary>
+		/// <returns>Машина - хетчбек</returns>
         Car CreateHatchback();
+
+		/// <summary>
+		/// Создать универсал
+		/// </summary>
+		/// <returns>Машина - универсал</returns>
         Car CreateEstate();
+
+		/// <summary>
+		/// Отремонтировать машину
+		/// </summary>
+		/// <param name="car">Машина</param>
+	    void RepairCar(Car car);
         
         event CarCreationHandler CarCreated;
         event CarRepairHandler CarRepaired;

@@ -1,42 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Emit;
+﻿using System.Collections.Generic;
 
 namespace Lab01
 {
+	/// <summary>
+	/// Класс - фабрика Автоваз
+	/// </summary>
     public class AutoVaz : ICarFactory
     {
         private ITireFactory tireFactory;
         private IRimFactory rimFactory;
 
+	    /// <summary>
+		/// Конструктор
+		/// </summary>
+		/// <param name="tireFactory">Шинная фабрика</param>
+		/// <param name="rimFactory">Фабрика дисков</param>
         public AutoVaz(ITireFactory tireFactory, IRimFactory rimFactory)
         {
             this.tireFactory = tireFactory;
             this.rimFactory = rimFactory;
         }
-        
-        public Car CreateSedan()
+
+
+		/// <summary>
+		/// Создать седан
+		/// </summary>
+		/// <returns>Машина - седан</returns>
+		public Car CreateSedan()
         {
             var sedan = new Car() {Model = "Ваз 2110"};
             OnCarCreated("Ваз 2110", CarType.Sedan);
             return sedan;
         }
 
-        public Car CreateHatchback()
+		/// <summary>
+		/// Создать хетчбек
+		/// </summary>
+		/// <returns>Машина - хетчбек</returns>
+		public Car CreateHatchback()
         {
             var hatchback = new Car() { Model = "Ваз 2112"};
             OnCarCreated("Ваз 2112", CarType.Hatchback);
             return hatchback;
         }
 
-        public Car CreateEstate()
+		/// <summary>
+		/// Создать универсал
+		/// </summary>
+		/// <returns>Машина - универсал</returns>
+		public Car CreateEstate()
         {
             var estate = new Car() { Model = "Ваз 2111"};
             OnCarCreated("Ваз 2111", CarType.Estate);
             return estate;
         }
 
-        public void RepairCar(Car car)
+		/// <summary>
+		/// Отремонтировать машину
+		/// </summary>
+		/// <param name="car">Машина</param>
+		public void RepairCar(Car car)
         {
             OnCarRepaired(car.Model, new List<string>() {"двигатель", "коробка передач"});
         }

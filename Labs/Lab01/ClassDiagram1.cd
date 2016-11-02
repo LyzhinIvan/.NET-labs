@@ -77,14 +77,14 @@
   <Class Name="Lab01.Rim" Collapsed="true">
     <Position X="10.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAgAAAAAAIAAAAABAAAAAAA=</HashCode>
       <FileName>Rim.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Lab01.Tire" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="9" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAQEEAAAAAwAAAAAAAAAAQABAAAAABA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAQEkAAAAAwAAAAAAIAAAQABAAAAABA=</HashCode>
       <FileName>Tire.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -106,7 +106,7 @@
   <Interface Name="Lab01.ICarFactory" Collapsed="true">
     <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIAAAEAAAAAAAAAAAAAACAAAAAEAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAIAAAEAAAAAAAAAAAAAgCAAAAAEAAAAAAAEAAAAA=</HashCode>
       <FileName>ICarFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -124,13 +124,6 @@
       <FileName>ITireFactory.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="Lab01.CarType" Collapsed="true">
-    <Position X="7.25" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAACAAAAAABAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Car.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Enum Name="Lab01.LoggingType" Collapsed="true">
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
@@ -149,7 +142,14 @@
     <Position X="9" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAEAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
-      <FileName>Tire.cs</FileName>
+      <FileName>CarcassType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Lab01.CarType" Collapsed="true">
+    <Position X="7.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAABAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CarType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Delegate Name="Lab01.LogWrite" Collapsed="true">

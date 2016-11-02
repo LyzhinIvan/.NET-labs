@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace Lab01
 {
+	/// <summary>
+	/// Фабрика шин Кама
+	/// </summary>
     public class KamaFactory : ITireFactory
     {
         private static readonly List<Tire> ManufacturedTires = new List<Tire>();
@@ -19,7 +22,10 @@ namespace Lab01
             }
         }
 
-        public Tire CreateTire(int profileWidth, int profileHeight, CarcassType type, int diameter) => 
+		/// <summary>
+		/// Создать шину с заданными параметрами
+		/// </summary>
+		public Tire CreateTire(int profileWidth, int profileHeight, CarcassType type, int diameter) => 
             (from tire in ManufacturedTires
              where tire.ProfileWidth == profileWidth && tire.ProfileHeight == profileHeight && tire.Type == type && tire.Diameter == diameter
              select (Tire)tire.Clone())

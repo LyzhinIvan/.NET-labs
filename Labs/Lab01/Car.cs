@@ -2,16 +2,19 @@
 
 namespace Lab01
 {
+	/// <summary>
+	/// Класс Машина
+	/// </summary>
     public class Car
     {
+		/// <summary>
+		/// Модель машины
+		/// </summary>
         public string Model { get; set; }
-        public List<Wheel> Wheels { get; set; }
-    }
 
-    public enum CarType
-    {
-        Sedan,
-        Hatchback,
-        Estate
+		/// <summary>
+		/// Колеса, установленные на машине
+		/// </summary>
+        public List<Wheel> Wheels { get; set; }
     }
 }

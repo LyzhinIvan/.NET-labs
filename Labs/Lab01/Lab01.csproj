@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Lab01.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -48,6 +49,8 @@
     <Compile Include="AlcastaFactory.cs" />
     <Compile Include="AutoVaz.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="CarcassType.cs" />
+    <Compile Include="CarType.cs" />
     <Compile Include="Logging\CarCreationEventArgs.cs" />
     <Compile Include="Logging\CarFactoryEventArgs.cs" />
     <Compile Include="Logging\CarRepairEventArgs.cs" />
@@ -73,6 +76,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="config\kama.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="config\nokian.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
